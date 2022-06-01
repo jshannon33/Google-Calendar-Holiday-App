@@ -1,0 +1,19 @@
+let bodyEl = $("body");
+let topEl = $("<div>");
+let headerEl = $("<header>");
+headerEl.attr("class", "is-size-1");
+headerEl.text("Zen Quote and Gif Generator");
+bodyEl.append(topEl);
+topEl.append(headerEl);
+// above creates the header, makes it large, then appends it to the topEl, which is appended to the body
+let instructionsEl = $("<h2>");
+instructionsEl.text("From below choose a category to get a quote and gif");
+instructionsEl.attr("class", "is-size-2");
+headerEl.append(instructionsEl);
+// above creates the instructions, appends them below the header, makes them slightly smaller
+let bottomEl = $("<div>");
+let categoriesEl = $("<div>");
+categoriesEl.text("categories go here");
+topEl.append(bottomEl);
+bottomEl.append(categoriesEl);
+// above simply creates the bottomEl and a div for all of the categories to go into
