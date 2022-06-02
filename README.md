@@ -19,16 +19,19 @@
 
 ## Overview
 
+Our team has decided to build an app that will provide the user with many categories to choose from, then based on the category choice it will give a quote from the Zen Quotes API and a gif with the same keyword from the Giphy API. The user will also be able to scroll through similar gifs with the same category.
 ​
 
 ### The challenge
 
+Using two separate APIs to make an app, alongside a CSS library that is not Bootstrap.
+
 ### User Story
 
 ```markdown
-AS A
-I WANT
-SO THAT I
+AS A user
+I WANT to select a category
+SO THAT I can see a quote and a gif from that category.
 ```
 
 ### Screenshot
@@ -41,7 +44,7 @@ SO THAT I
 - Live Site URL: [Site]()
   ​
 
-## My process
+## The process
 
 1.
 
@@ -65,7 +68,10 @@ SO THAT I
 
 ## Authors
 
-- Github - []()
+- Github - [Max McLaughlin](https://github.com/lafflin)
+- Github - [Jason Shannon](https://github.com/jshannon33)
+- Github - [Austin Wu](https://github.com/austibb)
+- Github - [Edward Zapata](https://github.com/edward0306)
 
 ## Acknowledgments
 
