@@ -5,15 +5,13 @@
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [User Story](#user-story)
-  - [Acceptance Criteria](#acceptance-criteria)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+- [The process](#the-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
   ​
 
