@@ -21,7 +21,10 @@ function getApi() {
   let currentCall = requestUrl.concat('quotes/');
   // let key = prompt("Giphy API key?");
 
-  fetch(requestUrl + "today")
+  fetch(requestUrl + "today", {cors: {
+    origin: 'https://jshannon33.github.io',
+    methods: 'GET',
+    }})
     .then(function (response) {
       return response.json();
     })
