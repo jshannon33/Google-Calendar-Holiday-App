@@ -41,7 +41,7 @@ SO THAT I can see a quote and a gif from that category.
 ​
 
 - Solution URL: [Solution](https://github.com/jshannon33/Project-1-Interactive-Front-End-Application)
-- Live Site URL: [Site]()
+- Live Site URL: [Site](https://jshannon33.github.io/Project-1-Interactive-Front-End-Application/)
   ​
 
 ## The process
