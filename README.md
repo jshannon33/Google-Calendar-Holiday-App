@@ -15,19 +15,19 @@
 
 ## Overview
 
-Our team has decided to build an app that will provide the user with many categories to choose from, then based on the category choice it will give a quote from the Zen Quotes API and a gif with the same keyword from the Giphy API. The user will also be able to scroll through similar gifs with the same category.
+Our team has decided to build an app that will provide the user holidays from their country and give them the option to add them to their personal google calendar.
 ​
 
 ### The challenge
 
-Using two separate APIs to make an app, alongside a CSS library that is not Bootstrap.
+Using two separate APIs and a CSS library that is not Bootstrap, make an app.
 
 ### User Story
 
 ```markdown
 AS A user
-I WANT to select a category
-SO THAT I can see a quote and a gif from that category.
+I WANT view my calendar and relevant holidays
+SO THAT I can choose which holidays to add to my calendar.
 ```
 
 ### Screenshot
@@ -37,7 +37,7 @@ SO THAT I can see a quote and a gif from that category.
 ​
 
 - Solution URL: [Solution](https://github.com/jshannon33/Project-1-Interactive-Front-End-Application)
-- Live Site URL: [Site]()
+- Live Site URL: [Site](https://jshannon33.github.io/Project-1-Interactive-Front-End-Application/)
   ​
 
 ## The process
@@ -51,8 +51,8 @@ SO THAT I can see a quote and a gif from that category.
 - Bulma
 - JavaScript
 - jQuery
-- ZenQuotes API
-- Giphy API
+- Google Calendar API
+- date.nager API
 
 ### Continued development
 
