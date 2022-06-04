@@ -1,5 +1,3 @@
-# Project-1-Interactive-Front-End-Application
-
 ## Table of Contents
 
 - [Overview](#overview)
