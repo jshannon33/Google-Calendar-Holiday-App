@@ -4,24 +4,11 @@
 /* exported handleAuthClick */
 /* exported handleSignoutClick */
 
-// TODO(developer): Set to client ID and API key from the Developer Console
-// const CLIENT_ID = '28605827298-tl4218sn1lc3eie3e9bm6ab7vgrb02gb.apps.googleusercontent.com';
-// const API_KEY = 'AIzaSyC1Csyczu-tD3j17uP1qWT7BFEFW-Kzhwc';
-
-
-// Discovery doc URL for APIs used by the quickstart
-// const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
-
-// Authorization scopes required by the API; multiple scopes can be
-// included, separated by spaces.
-// const SCOPES = 'https://www.googleapis.com/auth/calendar';
-
 let tokenClient;
 let gapiInited = false;
 let gisInited = false;
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
-document.getElementById('signout_button').style.visibility = 'hidden';
 
 /**
  * Callback after api.js is loaded.
@@ -77,7 +64,7 @@ function handleAuthClick() {
             throw (resp);
         }
         console.log('sdfsf');
-        document.getElementById('signout_button').style.visibility = 'visible';
+        // document.getElementById('signout_button').style.visibility = 'visible';
         document.getElementById('authorize_button').innerText = 'Refresh';
         // await listUpcomingEvents();
     };
