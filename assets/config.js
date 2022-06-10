@@ -1,6 +1,13 @@
-const CONFIG = {
-    // giphyKey: 'mFIaFdiyr1io8MpoF3iFJ4zEZLnXVS0m',
-};
+// dom element variables
+var body = $("body");
+var countryCodeInput = $("#Country-Code");
+var formSubmit = $("#Form-Submit");
+
+// data variables
+var holiday_list; // unused, to be used when holidays are declared 
+
+
+// ----------- API access variables ----------- //
 
 // Nager Holiday API url
 const HOLIDAY_KEY = 'https://date.nager.at/api/v3/NextPublicHolidays/';
