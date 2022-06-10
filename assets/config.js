@@ -5,6 +5,7 @@ var formSubmit = $("#Form-Submit");
 
 // data variables
 var holiday_list; // unused, to be used when holidays are declared 
+var eventList = [];
 
 
 // ----------- API access variables ----------- //

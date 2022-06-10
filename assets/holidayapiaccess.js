@@ -33,8 +33,8 @@ fetch("https://date.nager.at/api/v3/AvailableCountries")
 		countries.map(function (countries) {
 			let countryList = $("<button>");
 
-			countryList.text(`${countries.name}`);
-			countryList.attr("data-code", `${countries.countryCode}`);
+			countryList.text(countries.name);
+			countryList.attr("data-code", countries.countryCode);
 			countryList.attr("class", "country-button");
 			container1.append(countryList);
 		});
@@ -44,33 +44,20 @@ fetch("https://date.nager.at/api/v3/AvailableCountries")
 // when button is clicked
 container1.on("click", ".country-button", function () {
 	var countryCode = $(this).data("code");
-	console.log(countryCode);
+	// console.log(countryCode);
 	fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${countryCode}`)
 		.then((response) => response.json())
 		.then((data) => {
+			console.log('data');
 			console.log(data);
+			holiday_list = data;
 			var holidays = data;
+			container2.text('');
 			holidays.map(function (holidays) {
 				let holidayList = $("<p>");
 
-				holidayList.text(`${holidays.localName}`);
+				holidayList.text(holidays.localName);
 				container2.append(holidayList);
-
-				var event = {
-					summary: `${holidays.localName}`,
-					location: `${holidays.countryCode}`,
-
-					start: {
-						date: `${holidays.date}`,
-						timeZone: "America/Los_Angeles",
-					},
-					end: {
-						date: `${holidays.date}`,
-						timeZone: "America/Los_Angeles",
-					},
-				};
-				console.log(event);
 			});
-			// on click take the data above and enter it to gcal
 		});
 });
