@@ -13,7 +13,7 @@ formSubmit.on("click", getHolidays);
 
 
 $('#authorize_button').on('click', handleAuthClick);
-$('#test_button').on('click', testEventFunction);
+// $('#test_button').on('click', testEventFunction);
 
 
 

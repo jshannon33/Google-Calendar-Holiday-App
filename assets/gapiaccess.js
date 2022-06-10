@@ -6,15 +6,16 @@ function loadCalendarApi() {
 }
 
 // accepts a parameter of an array of events to be added to the google calendar, in the google calendar event resource format. then loops through the array and posts each event to the calendar.
-function addCountryHolidays(x = null) {
+function addCountryHolidays() {
     console.log('adding country holiday');
+    let x = parseHolidays();
     if (x !== null) {
         console.log('adding holidays...')
         // for each holiday in x
-        for (holiday_event of x) {
+        for (holidayEvent of x) {
             return gapi.client.calendar.events.insert({
                 'calendarId': 'primary',
-                'resource': holiday_event
+                'resource': holidayEvent
             })
                 .then(function (response) {
                     // Handle the results here (response.result has the parsed body).
@@ -26,70 +27,19 @@ function addCountryHolidays(x = null) {
     } else {
         console.log('nothing to add!');
     }
-
-    /* events should be in this format: 
-    var event = {
-        'summary': 'EVENT TITLE',
-        'location': 'COUNTRY',
-        'description': 'SUBTITLE / DESCRIPTION',
-        'start': {
-            'dateTime': '2022-06-08T09:00:00-07:00',
-            'timeZone': 'America/Los_Angeles'
-        },
-        'end': {
-            'dateTime': '2022-06-09T17:00:00-07:00',
-            'timeZone': 'America/Los_Angeles'
-        },
-        'reminders': {
-            'useDefault': true
-        }
-    }; */
 };
 
 
 
-function testEventFunction() {
-    console.log('test event function console log');
-    var event = {
-        'summary': 'test event',
-        'location': '',
-        'description': 'test description',
-        'start': {
-            'dateTime': '2022-06-08T09:00:00-07:00',
-            'timeZone': 'America/Los_Angeles'
-        },
-        'end': {
-            'dateTime': '2022-06-09T17:00:00-07:00',
-            'timeZone': 'America/Los_Angeles'
-        },
-        'reminders': {
-            'useDefault': true
-        }
-    };
-
-    return gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': event
-    })
-        .then(function (response) {
-            // Handle the results here (response.result has the parsed body).
-            console.log("Response", response);
-        },
-            function (err) { console.error("Execute error", err); });
-};
-
-
-
-
-var eventList = [];
-
-function parseHolidays(apidata) {
+// takes the given list of holidays and returns an array of events formatted for Google Calendar
+function parseHolidays() {
     var event;
-    for (holiday of apidata) {
+    eventList = [];
+    for (holiday of holiday_list) {
         event = {
             'summary': holiday.name,
             'location': holiday.country,
-            'description': '',
+            'description': 'Locally, this holiday is known as ' + holiday.localName,
             'start': {
                 'date': holiday.date,
                 'timeZone': 'America/Los_Angeles'
@@ -102,7 +52,27 @@ function parseHolidays(apidata) {
                 'useDefault': true
             }
         };
-        eventList.append(event);
+        eventList.push(event);
     }
     return eventList;
 }
+
+function test() {
+    let holidayEvent = parseHolidays()[0];
+    console.log(holidayEvent);
+    alert();
+    return gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': holidayEvent
+    })
+        .then(function (response) {
+            // Handle the results here (response.result has the parsed body).
+            console.log("Response", response);
+        },
+            function (err) { console.error("Execute error", err); });
+}
+
+var pushEvents = addCountryHolidays;
+var testEvents = test;
+
+$('#add_button').on('click', pushEvents);
