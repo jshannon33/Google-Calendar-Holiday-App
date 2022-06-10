@@ -1,5 +1,7 @@
 // functions
 
+// function: on google account log in , hide the intro page elements and display page 2 elements. creates country buttons
+
 
 
 

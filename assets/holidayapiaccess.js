@@ -24,6 +24,7 @@ let container2 = $("<div>");
 body.append(container2);
 let countryButton = $(".country-button");
 
+// creates buttons for all the countries of the world
 fetch("https://date.nager.at/api/v3/AvailableCountries")
 	.then((response) => response.json())
 	.then((data) => {
