@@ -9,7 +9,7 @@ body {
 	background-color: rgb(193, 159, 159);
 }
 
-#homePage {
+#globe {
 	background: url(background.png);
 	background-size: cover;
 	border: 2px solid #000;
@@ -22,8 +22,14 @@ body {
 		2px 2px 25px #000 inset, -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,
 		25px 25px 45px RGBA(0, 0, 0, 0.45) inset;
 	margin: 0 auto;
+
 	/* rotate internal image */
 	/* transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg); */
+}
+
+#homePageText {
+	background: white;
+	opacity: 40%;
 }
 
 @keyframes movimiento {
