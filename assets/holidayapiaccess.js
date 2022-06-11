@@ -9,9 +9,9 @@ function getHolidays(event) {
 			console.log(data);
 			let holidays = data;
 			holidays.map(function (holidays) {
-				let holidayList = document.createElement("p");
-				holidayList.innerHTML = holidays.localName;
-				body.append(holidayList);
+				let countryButton = document.createElement("p");
+				countryButton.innerHTML = holidays.localName;
+				body.append(countryButton);
 			});
 		});
 }
@@ -20,6 +20,8 @@ function getHolidays(event) {
 let homePage = $("#homePage");
 let appPage = $("#appPage");
 let countryButton = $(".country-button");
+var holidayList = $('#holidayList');
+var countryList = $('#countryList');
 
 // creates buttons for all the countries of the world
 fetch("https://date.nager.at/api/v3/AvailableCountries")
@@ -28,33 +30,33 @@ fetch("https://date.nager.at/api/v3/AvailableCountries")
 		console.log(data);
 		let countries = data;
 		countries.map(function (countries) {
-			let countryList = $("<button>");
+			let countryButton = $("<button>");
 
-			countryList.text(countries.name);
-			countryList.attr("data-code", countries.countryCode);
-			countryList.attr("class", "country-button");
-			appPage.append(countryList);
+			countryButton.text(countries.name);
+			countryButton.attr("data-code", countries.countryCode);
+			countryButton.attr("class", "country-button");
+			countryList.append(countryButton);
 		});
 	});
 
 // function to make button on click pop up the information on holidays for that country
 // when button is clicked
-homePage.on("click", ".country-button", function () {
+appPage.on("click", ".country-button", function () {
 	var countryCode = $(this).data("code");
 	// console.log(countryCode);
 	fetch(`https://date.nager.at/api/v3/NextPublicHolidays/${countryCode}`)
 		.then((response) => response.json())
 		.then((data) => {
-			console.log('data');
-			console.log(data);
-			holiday_list = data;
-			var holidays = data;
-			appPage.text('');
+			console.log('country button clicked');
+			// console.log(data);
+			holidays = data;
+			// var holidays = data;
+			holidayList.text('');
 			holidays.map(function (holidays) {
-				let holidayList = $("<p>");
+				let countryButton = $("<p>");
 
-				holidayList.text(holidays.localName);
-				appPage.append(holidayList);
+				countryButton.text(holidays.localName);
+				holidayList.append(countryButton);
 			});
 		});
 });

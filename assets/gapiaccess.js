@@ -35,7 +35,7 @@ function addCountryHolidays() {
 function parseHolidays() {
     var event;
     eventList = [];
-    for (holiday of holiday_list) {
+    for (holiday of holidays) {
         event = {
             'summary': holiday.name,
             'location': holiday.country,
