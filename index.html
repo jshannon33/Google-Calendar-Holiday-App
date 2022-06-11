@@ -16,29 +16,33 @@
 </head>
 
 <body>
+	<!-- <button id="myBtn">Open Modal</button> -->
+	<div id="myModal" class="modal">
 
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Some text in the Modal..</p>
+			<button id="exitModalButton">ok</button>
+		</div>
+
+	</div>
 	<!-- welcome page, explains app and shows login button -->
 	<div id="homePage">
 		<div>
 			<header class="is-size-1" id="title">
 				<h1>Add Countries from Around the World :)</h1>
-				<h2 class="is-size-2" id="description">First sign into your google account, then you can add holidays using the nager
+				<h2 class="is-size-2" id="description">First sign into your google account, then you can add holidays
+					using the nager
 					holiday API.</h2>
 			</header>
-					<button id="authorize_button">Sign In</button>
+			<button id="authorize_button">Sign In</button>
 		</div>
-
-		<!-- <button id="test_button">test button</button> -->
 	</div>
 
 	<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
 	<div id="appPage">
 		<h1>Holidays!</h1>
-		<!-- <form id="myform">
-			<label for="Country-Code">Enter Country Code Below</label>
-			<input type="text" id="Country-Code" name="Country-Code" />
-			<input type="submit" id="Form-Submit" />
-		</form> -->
 		<div id="countryList"></div>
 		<div id="holidayList"></div>
 		<button id="add_button">Add Holidays!</button>

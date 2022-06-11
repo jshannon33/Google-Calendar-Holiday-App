@@ -63,10 +63,11 @@ function handleAuthClick() {
         if (resp.error !== undefined) {
             throw (resp);
         }
-        console.log('sdfsf');
+        // console.log('access granted');
         // document.getElementById('signout_button').style.visibility = 'visible';
-        document.getElementById('authorize_button').innerText = 'Refresh';
-        // await listUpcomingEvents();
+        // document.getElementById('authorize_button').innerText = 'Refresh';
+        homePage.hide();
+        appPage.show();
     };
 
     if (gapi.client.getToken() === null) {
