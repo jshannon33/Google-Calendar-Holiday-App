@@ -1,32 +1,47 @@
-// code for googel calendar api work
+// function variables 
+var pushEvents = addCountryHolidays;
 
-function loadCalendarApi() {
-    console.log('loadcalendarapi function is called');
-    gapi.client.load('calendar', 'v3', insertEvent);
-}
 
-// accepts a parameter of an array of events to be added to the google calendar, in the google calendar event resource format. then loops through the array and posts each event to the calendar.
+// code for google calendar api work
+
+// dont think we need this code
+// function loadCalendarApi() {
+//     console.log('loadcalendarapi function is called');
+//     gapi.client.load('calendar', 'v3', insertEvent);
+// }
+
+// loops through an array of preformatted events to be added to the google calendar, posts each event to the calendar.
 function addCountryHolidays() {
-    console.log('adding country holiday');
-    let x = parseHolidays();
-    if (x !== null) {
-        console.log('adding holidays...')
-        // for each holiday in x
-        for (holidayEvent of x) {
-            return gapi.client.calendar.events.insert({
-                'calendarId': 'primary',
-                'resource': holidayEvent
-            })
-                .then(function (response) {
-                    // Handle the results here (response.result has the parsed body).
-                    console.log("Response", response);
-                },
-                    function (err) { console.error("Execute error", err); });
-        }
-        console.log('all done!');
+    // if (activeCountry.hasClass())
+
+    if (activeCountry.hasClass('already-added')) {
+        // exits the function if the country has already been added to the users calendar
+        alert('You\'ve already added this country\'s holidays!');
+        modalMessage = 'You\'ve already added this country\'s holidays!';
+        
     } else {
-        console.log('nothing to add!');
-    }
+        // console.log('adding country holiday');
+        let x = parseHolidays();
+        if (x !== null) {
+            // console.log('adding holidays...')
+            // for each holiday in x
+            for (holidayEvent of x) {
+                return gapi.client.calendar.events.insert({
+                    'calendarId': 'primary',
+                    'resource': holidayEvent
+                })
+                    .then(function (response) {
+                        // Handle the results here (response.result has the parsed body).
+                        // console.log("Response", response);
+                    },
+                        function (err) { console.error("Execute error", err); });
+            }
+            // console.log('all done!');
+            activeCountry.addClass('already-added');
+        } else {
+            // console.log('nothing to add!');
+        }
+    };
 };
 
 
@@ -55,24 +70,4 @@ function parseHolidays() {
         eventList.push(event);
     }
     return eventList;
-}
-
-function test() {
-    let holidayEvent = parseHolidays()[0];
-    console.log(holidayEvent);
-    alert();
-    return gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': holidayEvent
-    })
-        .then(function (response) {
-            // Handle the results here (response.result has the parsed body).
-            console.log("Response", response);
-        },
-            function (err) { console.error("Execute error", err); });
-}
-
-var pushEvents = addCountryHolidays;
-var testEvents = test;
-
-$('#add_button').on('click', pushEvents);
+};
