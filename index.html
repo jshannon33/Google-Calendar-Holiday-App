@@ -7,8 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="SHORTCUT ICON" href="assets/travel.png">
-	<title>Zen Quote and Gif Generator</title>
+	<title>Add Holidays from Countries around the World!
+	</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
 	<link rel="stylesheet" href="assets/style.css" />
 </head>
 
@@ -17,27 +19,27 @@
 	<!-- welcome page, explains app and shows login button -->
 	<div id="homePage">
 		<div>
-			<header class="is-size-1">Google Calendar and Nager Holidays<h2 class="is-size-2">First sign into your
-					google
-					account, then you can add holidays using the nager holiday API.</h2>
+			<header class="is-size-1" id="title">
+				<h1>Add Countries from Around the World :)</h1>
+				<h2 class="is-size-2" id="description">First sign into your google account, then you can add holidays using the nager
+					holiday API.</h2>
 			</header>
-			<div>
-				<div>probably put a sign in button around here?</div>
-			</div>
+					<button id="authorize_button">Sign In</button>
 		</div>
-		<button id="authorize_button">Authorize</button>
-		<button id="test_button">test button</button>
+
+		<!-- <button id="test_button">test button</button> -->
 	</div>
 
 	<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
 	<div id="appPage">
-		<h1>Nager.Date Test</h1>
-		<form id="myform">
+		<h1>Holidays!</h1>
+		<!-- <form id="myform">
 			<label for="Country-Code">Enter Country Code Below</label>
 			<input type="text" id="Country-Code" name="Country-Code" />
 			<input type="submit" id="Form-Submit" />
-		</form>
-
+		</form> -->
+		<div id="countryList"></div>
+		<div id="holidayList"></div>
 		<button id="add_button">Add Holidays!</button>
 	</div>
 
