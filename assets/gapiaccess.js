@@ -18,7 +18,7 @@ function addCountryHolidays() {
         // exits the function if the country has already been added to the users calendar
         alert('You\'ve already added this country\'s holidays!');
         modalMessage = 'You\'ve already added this country\'s holidays!';
-        
+
     } else {
         // console.log('adding country holiday');
         let x = parseHolidays();
@@ -26,15 +26,7 @@ function addCountryHolidays() {
             // console.log('adding holidays...')
             // for each holiday in x
             for (holidayEvent of x) {
-                return gapi.client.calendar.events.insert({
-                    'calendarId': 'primary',
-                    'resource': holidayEvent
-                })
-                    .then(function (response) {
-                        // Handle the results here (response.result has the parsed body).
-                        // console.log("Response", response);
-                    },
-                        function (err) { console.error("Execute error", err); });
+                addHoliday(holidayEvent);
             }
             // console.log('all done!');
             activeCountry.addClass('already-added');
@@ -44,6 +36,17 @@ function addCountryHolidays() {
     };
 };
 
+function addHoliday(holidayEvent) {
+    return gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': holidayEvent
+    })
+        .then(function (response) {
+            // Handle the results here (response.result has the parsed body).
+            // console.log("Response", response);
+        },
+            function (err) { console.error("Execute error", err); });
+}
 
 
 // takes the given list of holidays and returns an array of events formatted for Google Calendar
