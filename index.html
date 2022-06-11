@@ -15,31 +15,31 @@
 	</head>
 
 	<body>
-    	<!-- <button id="myBtn">Open Modal</button> -->
-	<div id="myModal" class="modal">
-
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<p>Some text in the Modal..</p>
-			<button id="exitModalButton">ok</button>
-		</div>
-
-	</div>
-		<!-- welcome page, explains app and shows login button -->
-		<div id="homePage">
-			<div>
-				<header class="is-size-1" id="title">
-					<h1>Add Countries from Around the World :)</h1>
-					<h2 class="is-size-2" id="description">
-						First sign into your google account, then you can add holidays using
-						the nager holiday API.
-					</h2>
-				</header>
-				<button id="authorize_button">Sign In</button>
+		<!-- <button id="myBtn">Open Modal</button> -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Some text in the Modal..</p>
+				<button id="exitModalButton">ok</button>
 			</div>
-			<!-- <button id="test_button">test button</button> -->
 		</div>
+		<!-- welcome page, explains app and shows login button -->
+		<div id="homePage"></div>
+
+		<div class="is-flex is-flex-direction-column">
+			<h1 class="is-size-1" id="title">
+				Add Countries from Around the World :)
+			</h1>
+			<h2 class="is-size-2" id="description">
+				First sign into your google account, then you can add holidays using the
+				nager holiday API.
+			</h2>
+			<button id="authorize_button" class="is-align-self-center">
+				Sign In
+			</button>
+		</div>
+		<!-- <button id="test_button">test button</button> -->
 
 		<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
 		<div id="appPage">
@@ -56,7 +56,7 @@
 			<button id="add_button" class="">Add Holidays!</button>
 		</div>
 
-		<footer>
+		<footer class="footer">
 			<a href="https://www.flaticon.com/free-icons/travel" title="travel icons"
 				>Travel icons created by Freepik - Flaticon</a
 			>
