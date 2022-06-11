@@ -1,8 +1,8 @@
 body {
-	background-color: rgb(193, 159, 159);
+	background-color: rgb(199, 0, 0);
 }
 
-#homePage {
+#box {
 	background: url(background.png);
 	background-size: cover;
 	border: 2px solid #000;
@@ -14,7 +14,7 @@ body {
 	box-shadow: 0 0 25px RGBA(255, 255, 255, 0.1), -8px -8px 15px #000 inset,
 		2px 2px 25px #000 inset, -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,
 		25px 25px 45px RGBA(0, 0, 0, 0.45) inset;
-	margin: 0 auto;
+	margin: 6em auto;
 	/* rotate internal image */
 	/* transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg); */
 }
@@ -23,7 +23,6 @@ body {
 	0% {
 		background-position: 0 0;
 	}
-
 	100% {
 		background-position: 355px 0;
 	}
