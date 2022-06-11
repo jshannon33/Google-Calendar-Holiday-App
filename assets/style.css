@@ -1,5 +1,8 @@
 body {
 	background-color: rgb(193, 159, 159);
+	height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
 #homePage {
@@ -27,4 +30,8 @@ body {
 	100% {
 		background-position: 355px 0;
 	}
+}
+
+#add_button {
+	margin: 0 auto;
 }
