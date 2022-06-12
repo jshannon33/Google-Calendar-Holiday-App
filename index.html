@@ -13,14 +13,14 @@
 </head>
 
 <body>
-	<!-- <button id="myBtn">Open Modal</button> -->
-	<div id="myModal" class="modal">
+	<button id="myBtn">Open Modal</button>
+	<div id="modal" class="modal">
 
 		<!-- Modal content -->
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<p>Some text in the Modal..</p>
-			<button id="exitModalButton">ok</button>
+			<span class="exitModalButton close">&times;</span>
+			<p id="modalContent"></p>
+			<button class="exitModalButton">OK</button>
 		</div>
 
 	</div>
@@ -54,7 +54,8 @@
 		<button id="add_button" class="">Add Holidays!</button>
 	</div>
 
-	<footer>
+	<footer id="footer">
+		<button>Sign Out</button>
 		<a href="https://www.flaticon.com/free-icons/travel" title="travel icons">Travel icons created by Freepik -
 			Flaticon</a>
 	</footer>

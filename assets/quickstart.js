@@ -1,3 +1,4 @@
+// this code is the provided starter code from Google API Developer Documentation, with the exception of very few modifications.
 
 /* exported gapiLoaded */
 /* exported gisLoaded */
@@ -27,11 +28,8 @@ async function intializeGapiClient() {
         discoveryDocs: [DISCOVERY_DOC],
     });
     gapiInited = true;
-    // console.log('l;sdkfjs');
     maybeEnableButtons();
 }
-
-// intializeGapiClient();
 
 /**
  * Callback after Google Identity Services are loaded.
@@ -63,9 +61,7 @@ function handleAuthClick() {
         if (resp.error !== undefined) {
             throw (resp);
         }
-        // console.log('access granted');
-        // document.getElementById('signout_button').style.visibility = 'visible';
-        // document.getElementById('authorize_button').innerText = 'Refresh';
+        document.getElementById('signout_button').style.visibility = 'visible';
         homePage.hide();
         appPage.show();
     };
@@ -92,39 +88,4 @@ function handleSignoutClick() {
         document.getElementById('authorize_button').innerText = 'Authorize';
         document.getElementById('signout_button').style.visibility = 'hidden';
     }
-}
-
-/**
- * Print the summary and start datetime/date of the next ten events in
- * the authorized user's calendar. If no events are found an
- * appropriate message is printed.
- */
-async function listUpcomingEvents() {
-    let response;
-    try {
-        const request = {
-            'calendarId': 'primary',
-            'timeMin': (new Date()).toISOString(),
-            'showDeleted': false,
-            'singleEvents': true,
-            'maxResults': 10,
-            'orderBy': 'startTime',
-        };
-        response = await gapi.client.calendar.events.list(request);
-        console.log(response);
-    } catch (err) {
-        document.getElementById('content').innerText = err.message;
-        return;
-    }
-
-    const events = response.result.items;
-    if (!events || events.length == 0) {
-        document.getElementById('content').innerText = 'No events found.';
-        return;
-    }
-    // Flatten to string to display
-    const output = events.reduce(
-        (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
-        'Events:\n');
-    document.getElementById('content').innerText = output;
 }
