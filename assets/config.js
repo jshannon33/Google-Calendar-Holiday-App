@@ -20,6 +20,9 @@ var modalContent = $('#modalContent');
 // data variables
 var holidays; // unused, to be used when holidays are declared 
 var eventList = [];
+var calendarCreated = false;
+var idList;
+var calendarID = "calendarID no assignment";
 
 
 // ----------- API access variables ----------- //
@@ -45,6 +48,7 @@ const SCOPES = 'https://www.googleapis.com/auth/calendar';
 
 var activeCountry; // stores the dom element representing the button of the currently selected country.
 
-var modalMessage = 'OOGA BOOGA!!';
+// the content of the modal message to be displayed
+var modalMessage = 'OOGA BOOGA!!'; // needs to be changed or something lol
 
 

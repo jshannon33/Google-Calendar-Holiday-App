@@ -61,9 +61,9 @@ function handleAuthClick() {
         if (resp.error !== undefined) {
             throw (resp);
         }
-        document.getElementById('signout_button').style.visibility = 'visible';
         homePage.hide();
         appPage.show();
+        signoutButton.show();
     };
 
 	if (gapi.client.getToken() === null) {
@@ -84,8 +84,7 @@ function handleSignoutClick() {
     if (token !== null) {
         google.accounts.oauth2.revoke(token.access_token);
         gapi.client.setToken('');
-        document.getElementById('content').innerText = '';
-        document.getElementById('authorize_button').innerText = 'Authorize';
-        document.getElementById('signout_button').style.visibility = 'hidden';
+        // document.getElementById('authorize_button').innerText = 'Authorize';
+        signoutButton.hide();
     }
 }
