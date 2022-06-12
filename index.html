@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
 	<link rel="SHORTCUT ICON" href="assets/travel.png" />
 	<title>Add Holidays from Countries around the World!</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
@@ -24,33 +25,33 @@
 		</div>
 
 	</div>
-	<!-- welcome page, explains app and shows login button -->
-	<div id="homePage">
-		<div>
-			<header class="is-size-1" id="title">
-				<h1>Add Countries from Around the World :)</h1>
+		<!-- welcome page, explains app and shows login button -->
+
+		<div id="homePage">
+			<div id="globe"></div>
+			<div id="homePageText" class="is-flex is-flex-direction-column">
+				<h1 class="is-size-1" id="title">
+					Add Countries from Around the World :)
+				</h1>
 				<h2 class="is-size-2" id="description">
 					First sign into your google account, then you can add holidays using
 					the nager holiday API.
 				</h2>
-			</header>
-			<button id="authorize_button">Sign In</button>
+
+				<button id="authorize_button" class="is-align-self-center">
+					Sign In
+				</button>
+			</div>
 		</div>
 		<!-- <button id="test_button">test button</button> -->
 	</div>
 
 	<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
 	<div id="appPage">
-		<!-- <form id="myform">
-			<label for="Country-Code">Enter Country Code Below</label>
-			<input type="text" id="Country-Code" name="Country-Code" />
-			<input type="submit" id="Form-Submit" />
-		</form> -->
 		<div class="level columns">
 			<div id="countryList" class="column is-three-fifths level-left"></div>
 			<div id="holidayList" class="column is-two-fifths level-right"></div>
 		</div>
-
 		<button id="add_button" class="">Add Holidays!</button>
 	</div>
 
