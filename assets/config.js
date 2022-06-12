@@ -1,7 +1,21 @@
-// dom element variables
+/* ----- dom element variables ----- */
 var body = $("body");
-var countryCodeInput = $("#Country-Code");
-var formSubmit = $("#Form-Submit");
+var homePage = $("#homePage");
+var appPage = $("#appPage");
+var countryButton = $(".country-button");
+var holidayList = $('#holidayList');
+var countryList = $('#countryList');
+var addButton = $('#add_button');
+var signoutButton = $('#signout_button');
+
+// Get the modal
+var modal = $("#modal");
+var btn = $("#myBtn"); // delete
+var exitModalButton = $('.exitModalButton')
+var modalContent = $('#modalContent');
+
+
+
 
 // data variables
 var holidays; // unused, to be used when holidays are declared 
@@ -28,12 +42,9 @@ const SCOPES = 'https://www.googleapis.com/auth/calendar';
 
 
 
-var homePage = $("#homePage");
-var appPage = $("#appPage");
-var countryButton = $(".country-button");
-var holidayList = $('#holidayList');
-var countryList = $('#countryList');
 
-var activeCountry;
+var activeCountry; // stores the dom element representing the button of the currently selected country.
 
-var modalMessage = '';
+var modalMessage = 'OOGA BOOGA!!';
+
+

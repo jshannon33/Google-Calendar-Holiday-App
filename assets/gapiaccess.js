@@ -1,17 +1,17 @@
-// function variables
-var pushEvents = addCountryHolidays;
+/* contains all original functions that directly use and interact with the Google Calendar API. */
 
-// code for google calendar api work
-
-// dont think we need this code
-// function loadCalendarApi() {
-//     console.log('loadcalendarapi function is called');
-//     gapi.client.load('calendar', 'v3', insertEvent);
-// }
-
-// loops through an array of preformatted events to be added to the google calendar, posts each event to the calendar.
-function addCountryHolidays() {
-	// if (activeCountry.hasClass())
+// accepts an object formatted for Google Calendar event creation, pushes to user's calendar
+function addHoliday(holidayEvent) {
+    return gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': holidayEvent
+    })
+        .then(function (response) {
+            // Handle the results here (response.result has the parsed body).
+            // console.log("Response", response);
+        },
+            function (err) { console.error("Execute error", err); });
+}
 
 	if (activeCountry.hasClass("already-added")) {
 		// exits the function if the country has already been added to the users calendar
