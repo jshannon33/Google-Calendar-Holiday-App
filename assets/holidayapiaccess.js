@@ -1,19 +1,19 @@
 
 // creates buttons for each country returned from Nager Holiday API
 function getCountries() {
-fetch("https://date.nager.at/api/v3/AvailableCountries")
-	.then((response) => response.json())
-	.then((data) => {
-		let countries = data;
-		countries.map(function (countries) {
-			let countryButton = $("<button>");
+	fetch("https://date.nager.at/api/v3/AvailableCountries")
+		.then((response) => response.json())
+		.then((data) => {
+			let countries = data;
+			countries.map(function (countries) {
+				let countryButton = $("<button>");
 
-			countryButton.text(countries.name);
-			countryButton.attr("data-code", countries.countryCode);
-			countryButton.attr("class", "country-button");
-			countryList.append(countryButton);
+				countryButton.text(countries.name);
+				countryButton.attr("data-code", countries.countryCode);
+				countryButton.attr("class", "country-button");
+				countryList.append(countryButton);
+			});
 		});
-	});
 };
 
 // function to display a list of holidays for a given country
