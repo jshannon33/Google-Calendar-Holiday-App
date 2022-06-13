@@ -61,13 +61,10 @@ function createNewCalendar() {
 
 
 function getCalendarID() {
-    console.log('getCalendarList called')
     return gapi.client.calendar.calendarList.list({})
         .then(function (response) {
             // Handle the results here (response.result has the parsed body).
-            console.log("Response", response.result);
             idList = response.result.items;
-            // console.log(idList);
             console.log('shiet');
             for (calendar of idList) {
                 if (calendar.summary === "Holidays of the World") {
