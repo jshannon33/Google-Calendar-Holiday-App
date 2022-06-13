@@ -14,7 +14,6 @@
 	</head>
 
 	<body class="has-background-info-light">
-		<!-- <button id="myBtn">Open Modal</button> -->
 		<div id="modal" class="modal">
 			<!-- Modal content -->
 			<div class="modal-content">
@@ -28,6 +27,7 @@
 		<div id="homePage">
 			<div id="globe"></div>
 			<div id="homePageText" class="is-flex is-flex-direction-column">
+				<!-- user explainer -->
 				<h1 class="is-size-1" id="title">
 					Add Countries from Around the World :)
 				</h1>
@@ -35,21 +35,27 @@
 					First sign into your google account, then you can add holidays using
 					the nager holiday API.
 				</h2>
-
-				<button id="authorize_button" class=" button is-align-self-center">
+				<!-- triggers google login, after successful login you will go the second page -->
+        <button id="authorize_button" class=" button is-align-self-center">
 					Sign In
 				</button>
 			</div>
 		</div>
 
-	<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
-	<div id="appPage">
-		<!-- container???? -->
-		<div class="level columns container"> 
-			<div id="countryList" class="column is-three-fifths level-left"></div>
-			<div id="holidayList" class="column is-two-fifths level-right"></div>
+		<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
+		<div id="appPage">
+			<h3 class="second-header is-size-2">
+				Pick a country to see its holidays
+			</h3>
+
+			<div class="level columns">
+				<!-- list of countries is generated here -->
+				<div id="countryList" class="column is-three-fifths level-left"></div>
+				<!-- after selecting a country a list of the holidays for it is generated here -->
+				<div id="holidayList" class="column is-two-fifths level-right"></div>
 			</div>
-			<button id="addButton" class="button">Add Holidays!</button>
+			<!-- button to add the holidays to you personal google calendar -->
+			<button id="add_button" class="button">Add Holidays!</button>
 		</div>
 
 		<footer id="footer">

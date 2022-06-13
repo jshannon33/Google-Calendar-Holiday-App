@@ -3,13 +3,11 @@ body {
 	margin-bottom: 60px;
 	padding: 0;
 	overflow: hidden;
-
 }
 
 button:hover {
     background-color: rgb(88, 162, 252);
     cursor: pointer;
-
 }
 
 .footer {
@@ -101,27 +99,22 @@ button:hover {
 }
 
 #footer {
+	display: flex;
+	flex-direction: row;
 	position: fixed;
 	height: 60px;
-
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	margin-bottom: 0px;
 	padding-top: 10px;
 	text-align: center;
-}
-
-#footer button {
-	display: block;
-	margin: auto;
+	justify-content: space-around;
 }
 
 #authorize_button {
 	width: 100px;
 }
-
-
 
 /* div for entire homePageText */
 .is-flex {
@@ -141,10 +134,6 @@ button:hover {
 	color: #000;	
 }
 
-/* sign in button */
-/* .is-align-self-center{ 
-	
-}   */
 
 #countryList{
   width: 50%;
@@ -168,6 +157,9 @@ button:hover {
 .column{
   display: grid;
   grid-template-columns: 1fr;
+
+.second-header {
+	text-align: center;
 }
 
 #addButton {
