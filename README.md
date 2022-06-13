@@ -1,3 +1,5 @@
+# Project 1
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -34,15 +36,17 @@ SO THAT I can choose which holidays to add to my calendar.
 
 ### Links
 
-​
-
 - Solution URL: [Solution](https://github.com/jshannon33/Project-1-Interactive-Front-End-Application)
 - Live Site URL: [Site](https://jshannon33.github.io/Project-1-Interactive-Front-End-Application/)
   ​
 
 ## The process
 
-1.
+1. The first thing we did was got an html file set up to use as a testing grounds for our APIs. During this time other team members began doing mockups for the page design.
+
+2. After getting our API's working separately, we began working on getting them to work together.
+
+3. Following this we began to style the page and then getting page itself functioning properly.
 
 ### Built with
 
@@ -56,11 +60,13 @@ SO THAT I can choose which holidays to add to my calendar.
 
 ### Continued development
 
--
+- Our next goal would be to detect the users current country and input those holidays into their calendar automatically
 
 ### Useful resources
 
--
+- [Bulma Docs](https://bulma.io/documentation/)
+- [Google Calendar Docs](https://developers.google.com/calendar/api/guides/overview/)
+- [Nager.Date Docs](https://date.nager.at/swagger/index.html)
 
 ## Authors
 
@@ -68,7 +74,3 @@ SO THAT I can choose which holidays to add to my calendar.
 - Github - [Jason Shannon](https://github.com/jshannon33)
 - Github - [Austin Wu](https://github.com/austibb)
 - Github - [Edward Zapata](https://github.com/edward0306)
-
-## Acknowledgments
-
--
