@@ -1,28 +1,13 @@
 body {
-	background-color: rgb(193, 159, 159);
 	height: 100vh;
 	margin-bottom: 60px;
 	padding: 0;
 	overflow: hidden;
 
+}
 
-	/* background-image: url(culture.jpg); */
-	/* background-repeat: no-repeat; */
-background-color: rgb(118, 205, 97);
-}
-button {
-    border-radius: 10px;
-    border: thick solid transparent;
-    background-color: rgb(49, 11, 112);
-    color: white;
-    padding: 10px 10px;
-    display: inline-block;
-    margin: inherit;
-    font-size: 20px;
-    text-align: center;
-}
 button:hover {
-    background-color: rgb(196, 61, 240);
+    background-color: rgb(88, 162, 252);
     cursor: pointer;
 
 }
@@ -161,10 +146,6 @@ button:hover {
 	
 }   */
 
-.container{
-  display: flex;
-  width: 100%;
-}
 #countryList{
   width: 50%;
   display: grid;
@@ -173,7 +154,7 @@ button:hover {
   max-height: 70vh;
   overflow: scroll;
   overflow-x: hidden;
-  margin: 10vh 5vh;
+  margin: 10vh 5vw 2vh 5vw;
 }
 
 #holidayList{
@@ -182,9 +163,14 @@ button:hover {
   max-height: 70vh;
   overflow: scroll;
   overflow-x: hidden;
-  margin: 10vh 5vh;
+  margin: 10vh 5vw 2vh 5vw;
 }
 .column{
   display: grid;
   grid-template-columns: 1fr;
 }
+
+#addButton {
+  margin-left: 50%;
+  margin-right: 50%;
+};
