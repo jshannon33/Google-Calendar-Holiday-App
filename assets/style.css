@@ -161,3 +161,30 @@ button:hover {
 	
 }   */
 
+.container{
+  display: flex;
+  width: 100%;
+}
+#countryList{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10vh 5vh;
+}
+
+#holidayList{
+  width: 50%;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10vh 5vh;
+}
+.column{
+  display: grid;
+  grid-template-columns: 1fr;
+}

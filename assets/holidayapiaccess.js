@@ -6,12 +6,15 @@ function getCountries() {
 		.then((data) => {
 			let countries = data;
 			countries.map(function (countries) {
-				let countryButton = $("<button>");
-
+				// insert an h4 title into the country list div
+				let countryButton = $('<button>');
+				let countryColumn = $('<div>');
+				countryColumn.attr('class', 'column')
 				countryButton.text(countries.name);
-				countryButton.attr("data-code", countries.countryCode);
-				countryButton.attr("class", "country-button");
-				countryList.append(countryButton);
+				countryButton.attr('data-code', countries.countryCode);
+				countryButton.attr('class', 'country-button button is-fullwidth');
+				countryColumn.append(countryButton);
+				countryList.append(countryColumn);
 			});
 		});
 };
@@ -19,6 +22,7 @@ function getCountries() {
 // function to display a list of holidays for a given country
 // when their respective button is clicked
 function showHolidays() {
+	// console.log('show holidays clicked')
 	addButton.show();
 	activeCountry = $(this);
 	var countryCode = $(this).data("code");
@@ -27,6 +31,8 @@ function showHolidays() {
 		.then((data) => {
 			holidays = data;
 			holidayList.text('');
+			// create a $('<h4>') to insert into the holiday list before holdays.map occurs
+
 			holidays.map(function (holidays) {
 				let holiday = $("<p>");
 
