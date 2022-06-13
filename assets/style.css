@@ -157,12 +157,13 @@ button:hover {
 .column{
   display: grid;
   grid-template-columns: 1fr;
+}
 
 .second-header {
 	text-align: center;
 }
 
-#addButton {
+#add_button {
   margin-left: 50%;
   margin-right: 50%;
 };
