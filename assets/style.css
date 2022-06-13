@@ -114,20 +114,17 @@ button:hover {
 }
 
 #footer {
+	display: flex;
+	flex-direction: row;
 	position: fixed;
 	height: 60px;
-
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	margin-bottom: 0px;
 	padding-top: 10px;
 	text-align: center;
-}
-
-#footer button {
-	display: block;
-	margin: auto;
+	justify-content: space-around;
 }
 
 #authorize_button {
@@ -151,11 +148,6 @@ button:hover {
 .is-size-2 {
 	color: #000;
 }
-
-/* sign in button */
-/* .is-align-self-center{ 
-	
-}   */
 
 .container {
 	display: flex;
