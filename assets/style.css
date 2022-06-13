@@ -3,9 +3,6 @@ body {
 	margin-bottom: 60px;
 	padding: 0;
 	overflow: hidden;
-	/* background-image: url(culture.jpg); */
-	/* background-repeat: no-repeat; */
-background-color: rgb(118, 205, 97);
 }
 
 button {
@@ -43,7 +40,7 @@ button:hover {
 	box-shadow: 0 0 25px RGBA(255, 255, 255, 0.1), -8px -8px 15px #000 inset,
 		2px 2px 25px #000 inset, -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,
 		25px 25px 45px RGBA(0, 0, 0, 0.45) inset;
-	margin: 0 auto;
+	margin: 15px auto;
 
 	/* rotate internal image */
 	/* transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg); */
@@ -51,7 +48,7 @@ button:hover {
 
 #homePageText {
 	background: white;
-	/* opacity: 40%; */
+	margin: 15px 45px 45px;
 }
 
 @keyframes movimiento {
@@ -131,6 +128,7 @@ button:hover {
 
 #authorize_button {
 	width: 100px;
+	margin-bottom: 5px;
 }
 
 /* div for entire homePageText */
@@ -144,11 +142,15 @@ button:hover {
 /* for h1 div inside homePageText */
 .is-size-1 {
 	color: #000;
+	text-decoration: underline 2px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* for h2 div inside homePageText */
 .is-size-2 {
 	color: #000;	
+	text-decoration: underline 2px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
