@@ -33,7 +33,7 @@ function addCountryHolidays() {
 		createNewCalendar();
 		setTimeout(function () {
 			getCalendarID(); // stores id of the created calendar
-		}, 2000); // neeed help figuring out how to make a function complete fully before proceeding
+		}, 4000); // neeed help figuring out how to make a function complete fully before proceeding
 		calendarCreated = true;
 	}
 

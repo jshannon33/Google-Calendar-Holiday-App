@@ -53,17 +53,6 @@ function createNewCalendar() {
             function (err) { console.error("Execute error", err); });
 }
 
-// function getCalendarID() {
-//     console.log('getCalendarID called');
-//     // getCalendarList();
-//     // console.log("idlist,", idList);
-//     // console.log('gottem');
-
-//     // for (calendar of calendarList) {
-
-//     // };
-//     return 'd'
-// };
 
 function getCalendarID() {
     console.log('getCalendarList called')
