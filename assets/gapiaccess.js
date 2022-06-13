@@ -16,12 +16,18 @@ function addHoliday(holidayEvent) {
 // takes the given list of holidays and returns an array of events formatted for Google Calendar
 function parseHolidays() {
     var event;
+    let descriptionString;
     eventList = [];
     for (holiday of holidays) {
+        if (holiday.localName === holiday.name) {
+            descriptionString = 'National holiday of ' + activeCountry.text() + ".";
+        } else {
+            descriptionString = 'In ' + activeCountry.text() + ', this holiday is known as ' + holiday.localName + '!';
+        }
         event = {
             summary: holiday.name,
             location: holiday.country,
-            description: "Locally, this holiday is known as " + holiday.localName,
+            description: descriptionString,
             start: {
                 date: holiday.date,
                 timeZone: "America/Los_Angeles",

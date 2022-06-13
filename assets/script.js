@@ -17,25 +17,23 @@ function showModal() {
 }
 
 //  pseudo code... 
-// function parentfunc() {
-// 	if calendar does not exist yet:
-// 		create calendar and stuff
-// 		store ID
-// 		time out, forloop holidays 
-// 	else:
-// 		for loop holidays
-// };
+function parentfunc() {
+	if (calendarCreated === false) { // only runs the first time it's called
+		createNewCalendar();
+		setTimeout(function () { // doesnt run calendar id until creation is completed..... about 2 seconds later
+			getCalendarID(); // stores id of the created calendar
+		}, 2000); // neeed help figuring out how to make a function complete fully before proceeding
+		calendarCreated = true;
+		setTimeout(addCountryHolidays, 4000); // additional 2 seconds before 
+
+	} else {
+		addCountryHolidays(); // runs immediately if the desired calendar has been created
+	}
+};
 
 // loops through an array of preformatted events to be added to the google calendar, posts each event to the calendar.
 function addCountryHolidays() {
-	if (calendarCreated === false) {
-		createNewCalendar();
-		setTimeout(function () {
-			getCalendarID(); // stores id of the created calendar
-		}, 4000); // neeed help figuring out how to make a function complete fully before proceeding
-		calendarCreated = true;
-	}
-
+	// add comment explaining the purpose of if/else
 	if (activeCountry.hasClass('already-added')) {
 		// exits the function if the country has already been added to the users calendar
 		modalMessage = 'You\'ve already added holidays from this country!';
@@ -48,7 +46,7 @@ function addCountryHolidays() {
 				addHoliday(holidayEvent);
 			}
 			activeCountry.addClass('already-added');
-			activeCountry.css('background-color', 'grey'); // change/delete
+			activeCountry.css('background-color', 'lightgrey'); // change/delete
 
 			modalMessage = 'Successfully added to your calendar!';
 			showModal();
@@ -58,6 +56,7 @@ function addCountryHolidays() {
 	};
 };
 
+// add comment
 function deAuthorize() {
 	console.log('deauthorized');
 	appPage.hide();
@@ -74,7 +73,7 @@ init();
 $('#authorize_button').on('click', handleAuthClick); // grants access to user's google account
 appPage.on("click", ".country-button", showHolidays); // displays holidays for the selected country
 
-addButton.on('click', addCountryHolidays); // requests to add holidays to Google Calendar
+addButton.on('click', parentfunc); // requests to add holidays to Google Calendar
 
 // When the user clicks the button, open the modal . for testing only.
 // btn.on('click', showModal);  // delete
