@@ -3,6 +3,21 @@ body {
 	margin-bottom: 60px;
 	padding: 0;
 	overflow: hidden;
+	/* background-image: url(culture.jpg); */
+	/* background-repeat: no-repeat; */
+background-color: rgb(118, 205, 97);
+}
+
+button {
+    border-radius: 10px;
+    border: thick solid transparent;
+    background-color: rgb(49, 11, 112);
+    color: white;
+    padding: 10px 10px;
+    display: inline-block;
+    margin: inherit;
+    font-size: 20px;
+    text-align: center;
 }
 
 button:hover {
@@ -15,6 +30,8 @@ button:hover {
 }
 
 #globe {
+	/* margin-top: 20px;
+	padding-top: 20px; */
 	background: url(background.png);
 	background-size: cover;
 	border: 2px solid #000;
