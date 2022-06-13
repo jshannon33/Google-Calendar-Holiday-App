@@ -58,7 +58,6 @@ function addCountryHolidays() {
 
 // add comment
 function deAuthorize() {
-	console.log('deauthorized');
 	appPage.hide();
 	homePage.show();
 	handleSignoutClick();

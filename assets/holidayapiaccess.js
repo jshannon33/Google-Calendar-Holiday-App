@@ -22,7 +22,6 @@ function getCountries() {
 // function to display a list of holidays for a given country
 // when their respective button is clicked
 function showHolidays() {
-	// console.log('show holidays clicked')
 	addButton.show();
 	activeCountry = $(this);
 	var countryCode = $(this).data("code");
@@ -31,8 +30,6 @@ function showHolidays() {
 		.then((data) => {
 			holidays = data;
 			holidayList.text('');
-			// create a $('<h4>') to insert into the holiday list before holdays.map occurs
-
 			holidays.map(function (holidays) {
 				let holiday = $("<p>");
 
