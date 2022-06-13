@@ -105,19 +105,8 @@ body {
 	justify-content: space-around;
 }
 
-#authorize_button {
-	width: 150px;
-	margin-bottom: 10px;
-	background-color: rgb(49, 11, 112);
-	color: white;
-	padding: 10px 10px;
-	display: inline-block;
-	font-size: 20px;
-	text-align: center;
-}
-
-#authorize_button:hover {
-	background-color: rgb(196, 61, 240);
+.button:hover {
+	background-color: rgb(146, 235, 255);
 	cursor: pointer;
 }
 
