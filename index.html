@@ -1,87 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="SHORTCUT ICON" href="assets/travel.png" />
-		<title>Add Holidays from Countries around the World!</title>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-		/>
-		<link rel="stylesheet" href="assets/style.css" />
-	</head>
 
-	<body class="has-background-info-light">
-		<div id="modal" class="modal">
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="exitModalButton close">&times;</span>
-				<p id="modalContent"></p>
-				<button class="exitModalButton">OK</button>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="SHORTCUT ICON" href="assets/travel.png" />
+	<title>Add Holidays from Countries around the World!</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+	<link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="has-background-info-light">
+	<div id="modal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="exitModalButton close">&times;</span>
+			<p id="modalContent"></p>
+			<button class="exitModalButton">OK</button>
 		</div>
-		<!-- welcome page, explains app and shows login button -->
+	</div>
+	<!-- welcome page, explains app and shows login button -->
 
-		<div id="homePage">
-			<div id="globe"></div>
-			<div id="homePageText" class="is-flex is-flex-direction-column">
-				<!-- user explainer -->
-				<h1 class="is-size-1" id="title">
-					Add Countries from Around the World :)
-				</h1>
-				<h2 class="is-size-2" id="description">
-					First sign into your google account, then you can add holidays using
-					the nager holiday API.
-				</h2>
-				<!-- triggers google login, after successful login you will go the second page -->
-        <button id="authorize_button" class=" button is-align-self-center">
-					Sign In
-				</button>
-			</div>
+	<div id="homePage">
+		<div id="globe"></div>
+		<div id="homePageText" class="is-flex is-flex-direction-column">
+			<!-- user explainer -->
+			<h1 class="is-size-1" id="title">
+				Add Countries from Around the World :)
+			</h1>
+			<h2 class="is-size-2" id="description">
+				First sign into your google account, then you can add holidays using
+				the nager holiday API.
+			</h2>
+			<!-- triggers google login, after successful login you will go the second page -->
+			<button id="authorize_button" class=" button is-align-self-center">
+				Sign In
+			</button>
 		</div>
+	</div>
 
-		<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
-		<div id="appPage">
-			<h3 class="second-header is-size-2">
-				Pick a country to see its holidays
-			</h3>
+	<!-- page that shows the country buttons, holidays, and ability to add to calendar. -->
+	<div id="appPage">
+		<h3 class="second-header is-size-2">
+			Pick a country to see its holidays
+		</h3>
 
-			<div class="level columns">
-				<!-- list of countries is generated here -->
-				<div id="countryList" class="column is-three-fifths level-left"></div>
-				<!-- after selecting a country a list of the holidays for it is generated here -->
-				<div id="holidayList" class="column is-two-fifths level-right"></div>
-			</div>
-			<!-- button to add the holidays to you personal google calendar -->
-			<button id="add_button" class="button">Add Holidays!</button>
+		<div class="level columns">
+			<!-- list of countries is generated here -->
+			<div id="countryList" class="column is-three-fifths level-left"></div>
+			<!-- after selecting a country a list of the holidays for it is generated here -->
+			<div id="holidayList" class="column is-two-fifths level-right"></div>
 		</div>
+		<!-- button to add the holidays to you personal google calendar -->
+		<button id="add_button" class="button">Add Holidays!</button>
+	</div>
 
-		<footer id="footer">
-			<button id="signout_button" class="button">Sign Out</button>
-			<a href="https://www.flaticon.com/free-icons/travel" title="travel icons"
-				>Travel icons created by Freepik - Flaticon</a
-			>
-		</footer>
+	<footer id="footer">
+		<button id="signout_button" class="button">Sign Out</button>
+		<a href="https://www.flaticon.com/free-icons/travel" title="travel icons">Travel icons created by Freepik -
+			Flaticon</a>
+	</footer>
 
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-		<script src="assets/config.js"></script>
-		<script
-			async
-			defer
-			src="https://apis.google.com/js/api.js"
-			onload="gapiLoaded()"
-		></script>
-		<script
-			async
-			defer
-			src="https://accounts.google.com/gsi/client"
-			onload="gisLoaded()"
-		></script>
-		<script src="assets/quickstart.js"></script>
-		<script src="assets/holidayapiaccess.js"></script>
-		<script src="assets/gapiaccess.js"></script>
-		<script src="assets/script.js"></script>
-	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="assets/config.js"></script>
+	<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+	<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+	<script src="assets/quickstart.js"></script>
+	<script src="assets/holidayapiaccess.js"></script>
+	<script src="assets/gapiaccess.js"></script>
+	<script src="assets/script.js"></script>
+</body>
+
 </html>
