@@ -5,7 +5,6 @@
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [User Story](#user-story)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [The process](#the-process)
   - [Built with](#built-with)
