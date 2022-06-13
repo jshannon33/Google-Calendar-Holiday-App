@@ -32,8 +32,6 @@ I WANT view my calendar and relevant holidays
 SO THAT I can choose which holidays to add to my calendar.
 ```
 
-### Screenshot
-
 ### Links
 
 - Solution URL: [Solution](https://github.com/jshannon33/Project-1-Interactive-Front-End-Application)
