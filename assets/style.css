@@ -21,7 +21,7 @@ body {
 	box-shadow: 0 0 25px RGBA(255, 255, 255, 0.1), -8px -8px 15px #000 inset,
 		2px 2px 25px #000 inset, -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,
 		25px 25px 45px RGBA(0, 0, 0, 0.45) inset;
-	margin: 0 auto;
+	margin: 15px auto;
 
 	/* rotate internal image */
 	/* transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg); */
@@ -86,4 +86,82 @@ body {
 
 #authorize_button {
 	width: 100px;
+}
+#footer {
+	position: fixed;
+	height: 60px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	text-align: center;
+
+}
+
+#footer button {
+	display: block;
+	margin: auto;
+}
+
+#authorize_button {
+	width: 100px;
+}
+
+
+
+/* div for entire homePageText */
+.is-flex {
+	text-align: center;
+	border: solid black 2px;
+	border-radius: 30px;
+	margin: 15px 45px 45px;
+	/* opacity: 75%; */
+}
+
+/* for h1 div inside homePageText */
+.is-size-1 {
+	color: #000;
+	text-decoration: underline 2px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* for h2 div inside homePageText */
+.is-size-2 {
+	color: #000;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* sign in button */
+.is-align-self-center{ 
+	margin-bottom: 5px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}  
+
+.container{
+  display: flex;
+  width: 100%;
+}
+#countryList{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10vh 5vh;
+}
+
+#holidayList{
+  width: 50%;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10vh 5vh;
+}
+.column{
+  display: grid;
+  grid-template-columns: 1fr;
 }
