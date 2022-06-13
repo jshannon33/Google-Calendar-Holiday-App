@@ -4,6 +4,8 @@ body {
 	margin-bottom: 60px;
 	padding: 0;
 	overflow: hidden;
+
+
 	/* background-image: url(culture.jpg); */
 	/* background-repeat: no-repeat; */
 background-color: rgb(118, 205, 97);
@@ -22,6 +24,7 @@ button {
 button:hover {
     background-color: rgb(196, 61, 240);
     cursor: pointer;
+
 }
 
 .footer {
@@ -115,7 +118,7 @@ button:hover {
 #footer {
 	position: fixed;
 	height: 60px;
-	background-color: rgb(225, 192, 192);
+
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -132,6 +135,8 @@ button:hover {
 #authorize_button {
 	width: 100px;
 }
+
+
 
 /* div for entire homePageText */
 .is-flex {
@@ -155,3 +160,4 @@ button:hover {
 /* .is-align-self-center{ 
 	
 }   */
+
