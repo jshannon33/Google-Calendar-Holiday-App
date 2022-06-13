@@ -8,7 +8,6 @@ function init() {
 	appPage.hide();
 	signoutButton.hide();
 	addButton.hide();
-	// animate the loading screen! lol. slowly phase out the 
 }
 
 // displays modal message
