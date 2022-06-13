@@ -30,3 +30,23 @@ body {
     background-position: 355px 0
   }
 }
+
+.container{
+  display: flex;
+  width: 100%;
+}
+#countryList{
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+#holidayList{
+  width: 50%;
+}
+.column{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+

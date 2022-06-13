@@ -31,11 +31,14 @@ fetch("https://date.nager.at/api/v3/AvailableCountries")
 		let countries = data;
 		countries.map(function (countries) {
 			let countryButton = $("<button>");
+			let countryColumn = $("<div>");
+			countryColumn.attr("class", "column")
 
 			countryButton.text(countries.name);
 			countryButton.attr("data-code", countries.countryCode);
-			countryButton.attr("class", "country-button");
-			countryList.append(countryButton);
+			countryButton.attr("class", "country-button button is-fullwidth");
+			countryColumn.append(countryButton);
+			countryList.append(countryColumn);
 		});
 	});
 
