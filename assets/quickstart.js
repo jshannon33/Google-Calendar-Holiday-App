@@ -23,12 +23,12 @@ function gapiLoaded() {
  * discovery doc to initialize the API.
  */
 async function intializeGapiClient() {
-    await gapi.client.init({
-        apiKey: API_KEY,
-        discoveryDocs: [DISCOVERY_DOC],
-    });
-    gapiInited = true;
-    maybeEnableButtons();
+	await gapi.client.init({
+		apiKey: API_KEY,
+		discoveryDocs: [DISCOVERY_DOC],
+	});
+	gapiInited = true;
+	maybeEnableButtons();
 }
 
 /**
@@ -57,14 +57,14 @@ function maybeEnableButtons() {
  *  Sign in the user upon button click.
  */
 function handleAuthClick() {
-    tokenClient.callback = async (resp) => {
-        if (resp.error !== undefined) {
-            throw (resp);
-        }
-        homePage.hide();
-        appPage.show();
-        signoutButton.show();
-    };
+	tokenClient.callback = async (resp) => {
+		if (resp.error !== undefined) {
+			throw resp;
+		}
+		homePage.hide();
+		appPage.show();
+		signoutButton.show();
+	};
 
 	if (gapi.client.getToken() === null) {
 		// Prompt the user to select a Google Account and ask for consent to share their data
@@ -80,11 +80,10 @@ function handleAuthClick() {
  *  Sign out the user upon button click.
  */
 function handleSignoutClick() {
-    const token = gapi.client.getToken();
-    if (token !== null) {
-        google.accounts.oauth2.revoke(token.access_token);
-        gapi.client.setToken('');
-        // document.getElementById('authorize_button').innerText = 'Authorize';
-        signoutButton.hide();
-    }
+	const token = gapi.client.getToken();
+	if (token !== null) {
+		google.accounts.oauth2.revoke(token.access_token);
+		gapi.client.setToken("");
+		signoutButton.hide();
+	}
 }
