@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	overflow: hidden;
 }
+
 /* styling the background image for the globe, setting size, creating animation time and background shadows */
 #globe {
 	background: url(background.png);
@@ -75,6 +76,7 @@ body {
 	font-size: 28px;
 	font-weight: bold;
 }
+
 /* close buttong hover and focus features */
 .close:hover,
 .close:focus {
@@ -86,6 +88,7 @@ body {
 #add_button {
 	margin: 0 auto;
 }
+
 /* footer styling */
 #footer {
 	display: flex;
@@ -100,7 +103,7 @@ body {
 	text-align: center;
 	justify-content: space-around;
 }
-
+/* hover styling for buttons */
 .button:hover {
 	background-color: rgb(146, 235, 255);
 	cursor: pointer;
@@ -144,6 +147,7 @@ body {
 	overflow-x: hidden;
 	margin: 10vh 5vw 2vh 5vw;
 }
+
 /* styling for the list of holidays that display after country selection */
 #holidayList {
 	width: 50%;
@@ -153,15 +157,17 @@ body {
 	overflow-x: hidden;
 	margin: 10vh 5vw 2vh 5vw;
 }
-
+/* column styling for list of countries */
 .column {
 	display: grid;
 	grid-template-columns: 1fr;
 }
+
 /* header for landing page */
 .second-header {
 	text-align: center;
 }
+
 /* styling for the button that adds holidays to calendar */
 #add_button {
 	margin-left: 50%;
