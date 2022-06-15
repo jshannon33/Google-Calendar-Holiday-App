@@ -1,3 +1,4 @@
+/* general body styling */
 body {
 	height: 100vh;
 	margin-bottom: 60px;
@@ -5,13 +6,11 @@ body {
 	overflow: hidden;
 }
 
+/* styling the background image for the globe, setting size, creating animation time and background shadows */
 #globe {
-	/* margin-top: 20px;
-	padding-top: 20px; */
 	background: url(background.png);
 	background-size: cover;
 	border: 2px solid #000;
-	/* change the shape of globe if needed */
 	border-radius: 50%;
 	width: 400px;
 	height: 400px;
@@ -20,9 +19,6 @@ body {
 		2px 2px 25px #000 inset, -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,
 		25px 25px 45px RGBA(0, 0, 0, 0.45) inset;
 	margin: 15px auto;
-
-	/* rotate internal image */
-	/* transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg); */
 }
 
 #homePageText {
@@ -30,6 +26,7 @@ body {
 	margin: 15px 150px 0px 150px;
 }
 
+/* start and finish position */
 @keyframes movimiento {
 	0% {
 		background-position: 0 0;
@@ -80,6 +77,7 @@ body {
 	font-weight: bold;
 }
 
+/* close buttong hover and focus features */
 .close:hover,
 .close:focus {
 	color: #000;
@@ -91,6 +89,7 @@ body {
 	margin: 0 auto;
 }
 
+/* footer styling */
 #footer {
 	display: flex;
 	flex-direction: row;
@@ -104,13 +103,13 @@ body {
 	text-align: center;
 	justify-content: space-around;
 }
-
+/* hover styling for buttons */
 .button:hover {
 	background-color: rgb(146, 235, 255);
 	cursor: pointer;
 }
 
-/* div for entire homePageText */
+/* home page div styling containing h1, h2 and sign in button */
 .is-flex {
 	text-align: center;
 	border: solid black 2px;
@@ -118,26 +117,26 @@ body {
 	/* opacity: 75%; */
 }
 
-/* for h1 div inside homePageText */
+/* styling for homepage h1 */
 .is-size-1 {
 	color: #000;
 	text-decoration: underline 2px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* for h2 div inside homePageText */
+/* styling for homepage h2 */
 .is-size-2 {
 	color: #000;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* sign in button */
+/* homepage sign in button */
 .is-align-self-center {
 	margin-bottom: 5px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
+/* styling for the list of countries on the landing page */
 #countryList {
 	width: 50%;
 	display: grid;
@@ -149,6 +148,7 @@ body {
 	margin: 10vh 5vw 2vh 5vw;
 }
 
+/* styling for the list of holidays that display after country selection */
 #holidayList {
 	width: 50%;
 	height: 70vh;
@@ -157,16 +157,18 @@ body {
 	overflow-x: hidden;
 	margin: 10vh 5vw 2vh 5vw;
 }
-
+/* column styling for list of countries */
 .column {
 	display: grid;
 	grid-template-columns: 1fr;
 }
 
+/* header for landing page */
 .second-header {
 	text-align: center;
 }
 
+/* styling for the button that adds holidays to calendar */
 #add_button {
 	margin-left: 50%;
 	margin-right: 50%;

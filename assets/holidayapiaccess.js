@@ -1,4 +1,3 @@
-
 // creates buttons for each country returned from Nager Holiday API
 function getCountries() {
 	fetch("https://date.nager.at/api/v3/AvailableCountries")
@@ -6,21 +5,19 @@ function getCountries() {
 		.then((data) => {
 			let countries = data;
 			countries.map(function (countries) {
-				// insert an h4 title into the country list div
-				let countryButton = $('<button>');
-				let countryColumn = $('<div>');
-				countryColumn.attr('class', 'column')
+				let countryButton = $("<button>");
+				let countryColumn = $("<div>");
+				countryColumn.attr("class", "column");
 				countryButton.text(countries.name);
-				countryButton.attr('data-code', countries.countryCode);
-				countryButton.attr('class', 'country-button button is-fullwidth');
+				countryButton.attr("data-code", countries.countryCode);
+				countryButton.attr("class", "country-button button is-fullwidth");
 				countryColumn.append(countryButton);
 				countryList.append(countryColumn);
 			});
 		});
-};
+}
 
-// function to display a list of holidays for a given country
-// when their respective button is clicked
+// function to display a list of holidays for a given country when their respective button is clicked
 function showHolidays() {
 	addButton.show();
 	activeCountry = $(this);
@@ -29,7 +26,7 @@ function showHolidays() {
 		.then((response) => response.json())
 		.then((data) => {
 			holidays = data;
-			holidayList.text('');
+			holidayList.text("");
 			holidays.map(function (holidays) {
 				let holiday = $("<p>");
 
