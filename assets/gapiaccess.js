@@ -81,7 +81,7 @@ function getCalendarID() {
 		function (response) {
 			// Handle the results here (response.result has the parsed body).
 			idList = response.result.items;
-			console.log("shiet");
+			console.log("Calendar ID stored.");
 			for (calendar of idList) {
 				if (calendar.summary === "Holidays of the World") {
 					calendarID = calendar.id;

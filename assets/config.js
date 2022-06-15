@@ -7,12 +7,15 @@ var holidayList = $("#holidayList");
 var countryList = $("#countryList");
 var addButton = $("#add_button");
 var signoutButton = $("#signout_button");
+var activeCountry; // stores the dom element representing the button of the currently selected country.
 
-// Get the modal
+
+
+// modal variables
 var modal = $("#modal");
-var btn = $("#myBtn"); // delete
 var exitModalButton = $(".exitModalButton");
 var modalContent = $("#modalContent");
+var modalMessage = "OOGA BOOGA!!"; // needs to be changed or something lol
 
 // data variables
 var holidays; // unused, to be used when holidays are declared
@@ -38,8 +41,3 @@ const DISCOVERY_DOC =
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
 const SCOPES = "https://www.googleapis.com/auth/calendar";
-
-var activeCountry; // stores the dom element representing the button of the currently selected country.
-
-// the content of the modal message to be displayed
-var modalMessage = "OOGA BOOGA!!"; // needs to be changed or something lol
