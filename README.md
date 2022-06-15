@@ -29,6 +29,14 @@ Using two separate APIs and a CSS library that is not Bootstrap, make an functio
 AS A user
 I WANT view my calendar and relevant holidays
 SO THAT I can choose which holidays to add to my calendar.
+WHEN I click the sign in button
+THEN I can grant the app access to my google account
+WHEN I click on a country's name
+THEN the page displays that country's local holidays for the next 365 days
+WHEN I move to add holidays to my calendar
+THEN a calendar is created in my Google Calendar with all the holidays scheduled throughout the year
+WHEN I click sign out
+THEN I am redirected to the home page, and my google authentication credentials are revoked.
 ```
 
 ### Links
