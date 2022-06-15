@@ -16,12 +16,12 @@
 
 ## Overview
 
-Our team has decided to build an app that will provide the user holidays from their country and give them the option to add them to their personal google calendar.
+Our team has decided to build an app that will allow the user to add holidays from countries around the world to their Google Calendar.
 ​
 
 ### The challenge
 
-Using two separate APIs and a CSS library that is not Bootstrap, make an app.
+Using two separate APIs and a CSS library that is not Bootstrap, make an functional, responsive, interactive app.
 
 ### User Story
 
@@ -33,8 +33,8 @@ SO THAT I can choose which holidays to add to my calendar.
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/jshannon33/Project-1-Interactive-Front-End-Application)
-- Live Site URL: [Site](https://jshannon33.github.io/Project-1-Interactive-Front-End-Application/)
+- Solution URL: [Solution](https://github.com/jshannon33/Google-Calendar-Holiday-App/)
+- Live Site URL: [Site](https://jshannon33.github.io/Google-Calendar-Holiday-App/)
   ​
 
 ## The process
@@ -58,6 +58,8 @@ SO THAT I can choose which holidays to add to my calendar.
 ### Continued development
 
 - Our next goal would be to detect the users current country and input those holidays into their calendar automatically
+- streamline the UX and api call functionality in javascript to foolproof the app and ensure no errors can occur
+- utilize local storage to "remember" added holidays from previous visits to the app
 
 ### Useful resources
 
