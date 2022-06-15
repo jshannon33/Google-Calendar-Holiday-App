@@ -80,10 +80,10 @@ function handleAuthClick() {
  *  Sign out the user upon button click.
  */
 function handleSignoutClick() {
-	const token = gapi.client.getToken();
-	if (token !== null) {
-		google.accounts.oauth2.revoke(token.access_token);
-		gapi.client.setToken("");
-		signoutButton.hide();
-	}
+    const token = gapi.client.getToken();
+    if (token !== null) {
+        google.accounts.oauth2.revoke(token.access_token);
+        gapi.client.setToken('');
+        signoutButton.hide();
+    }
 }

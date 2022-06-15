@@ -16,7 +16,7 @@ function showModal() {
 }
 
 // creates a new calendar, stores it's ID if this is the first time it is run
-function parentfunc() {
+function addToCalendar() {
 	if (calendarCreated === false) {
 		// only runs the first time it's called
 		createNewCalendar();
@@ -26,6 +26,7 @@ function parentfunc() {
 		}, 2000);
 		calendarCreated = true;
 		setTimeout(addCountryHolidays, 4000); // additional 2 seconds before
+		// this code is not good, will fail if user has slow internet connection. need to fix in future deployments
 	} else {
 		// will add th countires holidays to the created calendar if the calendar already exists
 		addCountryHolidays(); // runs immediately if the desired calendar has been created
@@ -72,7 +73,7 @@ init();
 $("#authorize_button").on("click", handleAuthClick); // grants access to user's google account
 appPage.on("click", ".country-button", showHolidays); // displays holidays for the selected country
 
-addButton.on("click", parentfunc); // requests to add holidays to Google Calendar
+addButton.on("click", addToCalendar); // requests to add holidays to Google Calendar
 
 // closes the modal display
 exitModalButton.on("click", function (event) {
@@ -81,7 +82,3 @@ exitModalButton.on("click", function (event) {
 
 // revokes app access to user's google account
 signoutButton.on("click", deAuthorize);
-
-//  stretch goal: store user's email and "added " list to local storage, so in the future it will stil lbe red and prevent duplicate additions
-
-// local storage: store user's email address, added countries, and calendarID. mark added countries as unaddable

@@ -4,6 +4,7 @@ function getCountries() {
 		.then((response) => response.json())
 		.then((data) => {
 			let countries = data;
+			countryList.empty();
 			countries.map(function (countries) {
 				let countryButton = $("<button>");
 				let countryColumn = $("<div>");
